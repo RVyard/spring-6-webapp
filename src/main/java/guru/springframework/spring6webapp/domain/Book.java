@@ -20,6 +20,9 @@ public class Book {
     String title;
     String isbn;
 
+    @ManyToOne
+    Publisher publisher;
+
     public Long getId() {
         return Id;
     }
@@ -76,4 +79,13 @@ public class Book {
     public int hashCode() {
         return Id != null ? Id.hashCode() : 0;
     }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
+
 }
